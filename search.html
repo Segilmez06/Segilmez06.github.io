@@ -15,10 +15,6 @@
             {
                 document.getElementById("qBox").value = "";
             }
-            if(characterCode == 13)
-            {
-                Search();
-            }
         </script>
     </head>
     <body style="background-image: url('img/search-bg.jpg'); background-repeat: no-repeat; background-color: aqua;" align="center" onload="onLoadScr()">
@@ -28,9 +24,11 @@
         <br>
         <h3>Google ile arama</h3>
         <br>
-        <input type="text" name="Search Box" id="qBox" placeholder="Yazmaya başlayın..." style="width: 300px; height: 30px; font-size: 20px;">
-        <br>
-        <br>
-        <input type="button" value="Ara" onclick="Search()" style="width: 100px; height: 30px; font-size: 20px;">
+        <form onsubmit="Search();return false">           
+            <input type="text" name="qBox" id="qBox" placeholder="Yazmaya başlayın..." style="width: 300px; height: 30px; font-size: 20px;">
+            <br>
+            <br>
+            <input type="submit" value="Ara" style="width: 100px; height: 30px; font-size: 20px;">
+        </form>
     </body>
 </html>
