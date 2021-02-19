@@ -2,11 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarp Eren EGILMEZ</title>
+    <title>ERENTRONIK</title>
+    <style>
+
+.body{
+    background-color: #333;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: darkblue;
+    color: white;
+}
+
+.container{
+    background-color: white;
+    width: 100%;
+    height: max-content;
+    bottom: 700;
+}
+.webframe{
+    height: 750px;
+    width: 100%;
+}
+.framediv{
+    background-color: white;
+}
+    </style>
+
+    <script>
+        function home(){
+            document.getElementById("navframe").src = "main.html";
+        }
+        function codes(){
+            
+        }
+        function yt(){
+            
+        }
+        function about(){
+            
+        }
+    </script>
 </head>
-<body>
-    <h1>YAKINDA...</h1>
+<body class="body">
+    <div class="topnav">
+        <!--<a class="active" onclick="home()">Ana Sayfa</a>-->
+        <a onclick="home()"><img src="img/logo.jpg" alt="Ana Sayfa" style="height: 40px; width: 40px;" /></a>
+        <a onclick="codes()">Kodlar</a>
+        <a onclick="yt()">Youtube</a>
+        <a onclick="about()">Hakkında</a>
+    </div>
+    <div class="framediv">
+        <iframe frameborder="0" class="webframe" id="navframe" src="main.html"></iframe>
+    </div>
 </body>
 </html>
