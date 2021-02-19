@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERENTRONIK</title>
+    <title>Sarp Eren EGILMEZ</title>
+    <link rel="icon" type="image/png" href="img/Logo.png"/>
     <style>
 
 .body{
@@ -48,26 +49,26 @@
     background-color: white;
 }
     </style>
-
+    
     <script>
         function home(){
             document.getElementById("navframe").src = "main.html";
         }
         function codes(){
-            
+            document.getElementById("navframe").src = "codes.html";
         }
         function yt(){
-            
+            alert("Sayfadan ayrılıyorsunuz. Yönlendirileceğiniz sayfa: Youtube");
+            location.href = "https://www.youtube.com/erentronik";
         }
         function about(){
-            
+            document.getElementById("navframe").src = "about.html";
         }
     </script>
 </head>
 <body class="body">
     <div class="topnav">
-        <!--<a class="active" onclick="home()">Ana Sayfa</a>-->
-        <a onclick="home()"><img src="img/logo.jpg" alt="Ana Sayfa" style="height: 40px; width: 40px;" /></a>
+        <a onclick="home()" style="background-color: rgb(1, 105, 105);">Ana Sayfa</a>
         <a onclick="codes()">Kodlar</a>
         <a onclick="yt()">Youtube</a>
         <a onclick="about()">Hakkında</a>
