@@ -8,8 +8,11 @@
         <script>
             function Search()
             {
-                var searchQ = document.getElementById("qBox").value;
-                location.href = "https://www.google.com/search?q=" + searchQ;
+                if(document.getElementById("qBox").value != "")
+                {
+                    var searchQ = document.getElementById("qBox").value;
+                    location.href = "https://www.google.com/search?q=" + searchQ;
+                }
             }
             function onLoadScr()
             {
@@ -29,6 +32,8 @@
             .sForm{
                 background-color: white;
                 display: inline-block;
+                border-radius: 7px;
+                vertical-align: middle;
             }
             .sDiv{
                 text-align: center;
@@ -39,17 +44,17 @@
                 height: 30px;
                 font-size: 20px;
                 float: left;
-                border: white;
+                border: transparent;
             }
             .submitBtn{
-                width: 35px;
-                height: 35px;
+                width: 30px;
+                height: 30px;
                 font-size: 20px;
                 background-image: url('img/search-icon.png');
                 background-position: center;
                 background-size: cover;
                 float: right;
-                border: white;
+                border: transparent;
             }
 
         </style>
@@ -62,10 +67,6 @@
         <h3>Google ile arama</h3>
         <br>
         <form class="sForm" onsubmit="Search();return false">
-            <!--<div class="sDiv">
-                <div class="innerQBox"><input type="text" class="qBox" id="qBox" placeholder="Yazmaya başlayın..."/></div>
-                <div class="innerBtn"><input type="submit" class="submitBtn" value=""/></div>
-            </div>-->
             <input type="text" class="qBox" id="qBox" placeholder="Yazmaya başlayın..."/>
             <input type="submit" class="submitBtn" value=""/>
         </form>
