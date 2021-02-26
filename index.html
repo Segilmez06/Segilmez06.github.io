@@ -55,8 +55,8 @@
         function home(){
             document.getElementById("navframe").src = "main.html";
         }
-        function codes(){
-            document.getElementById("navframe").src = "codes.html";
+        function dls(){
+            document.getElementById("navframe").src = "downloadss.html";
         }
         function yt(){
             alert("Sayfadan ayrılıyorsunuz. Yönlendirileceğiniz sayfa: Youtube");
@@ -75,11 +75,11 @@
 </head>
 <body class="body" onload="onLoad()">
     <div class="topnav">
-        <a onclick="home()" style="background-color: rgb(1, 105, 105);">Ana Sayfa</a>
-        <a onclick="codes()">Kodlar</a>
+        <a onclick="home()" style="background-color: rgb(1, 105, 105);">Main Page</a>
+        <a onclick="dls()">Downloads</a>
         <a onclick="yt()">Youtube</a>
-        <a onclick="about()">Hakkında</a>
-        <a onclick="esWeb()">(BETA) esWeb Arama</a>
+        <a onclick="about()">About</a>
+        <a onclick="esWeb()">(BETA) esWeb Search</a>
     </div>
     <div class="framediv">
         <iframe frameborder="0" class="webframe" id="navframe" src="main.html"></iframe>
