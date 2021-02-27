@@ -17,6 +17,12 @@
     overflow: hidden;
 }
 
+.mobileTopnav {
+    background-color: #333;
+    overflow: hidden;
+    height: 0;
+}
+
 .topnav a {
     float: left;
     color: #f2f2f2;
@@ -74,6 +80,12 @@
         }
 
         function onLoad(){
+            if(window.innerWidth < 560){
+                if(confirm("Do you want to use mobile site?")){
+                document.getElementById("topnav").style.height = 0;
+                document.getElementById("mobileTopnav").style.height = "50px";
+                }
+            }
             if(location.href == "http://www.sarpe.tk/#/home"){
                 home();
             }
@@ -93,7 +105,14 @@
     </script>
 </head>
 <body class="body" onload="onLoad()">
-    <div class="topnav">
+    <div class="mobileTopnav" id="mobileTopnav">
+        <!--<a onclick="home()" style="background-color: rgb(1, 105, 105);">Home</a>
+        <a onclick="dls()">Downloads</a>
+        <a onclick="yt()">Youtube</a>
+        <a onclick="about()">About</a>
+        <a onclick="esWeb()">(BETA) esWeb Search</a>-->
+    </div>
+    <div class="topnav" id="topnav">
         <a onclick="home()" style="background-color: rgb(1, 105, 105);">Home</a>
         <a onclick="dls()">Downloads</a>
         <a onclick="yt()">Youtube</a>
