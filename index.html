@@ -53,10 +53,10 @@
     
     <script>
         function home(){
-            document.getElementById("navframe").src = "pages/main.html";
+            document.getElementById("navframe").src = "/pages/main.html";
         }
         function dls(){
-            document.getElementById("navframe").src = "pages/downloads.html";
+            document.getElementById("navframe").src = "/pages/downloads.html";
         }
         function yt(){
             if(confirm("You are leaving from this page. Are you sure? Redirecting to: Youtube")){
@@ -64,17 +64,16 @@
             }            
         }
         function about(){
-            document.getElementById("navframe").src = "pages/about.html";
+            document.getElementById("navframe").src = "/pages/about.html";
         }
         function esWeb(){
             location.href = "search";
         }
 
         function onLoad(){
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            /*if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
                 alert("You are using mobile device. Web page may not work properly.");
-            }
-            else{
+            }*/
             if(location.href == "http://www.sarpe.tk/#/home"){
                 home();
             }
@@ -102,7 +101,7 @@
         <a onclick="esWeb()">(BETA) esWeb Search</a>
     </div>
     <div class="framediv">
-        <iframe frameborder="0" class="webframe" id="navframe" src="pages/main.html"></iframe>
+        <iframe frameborder="0" class="webframe" id="navframe" src="/pages/main.html"></iframe>
     </div>
 </body>
 </html>
