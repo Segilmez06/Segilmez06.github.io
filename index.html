@@ -61,7 +61,10 @@
         function yt(){
             if(confirm("You are leaving from this page. Are you sure? Redirecting to: Youtube")){
                 location.href = "https://www.youtube.com/erentronik";
-            }            
+            } 
+            else{
+                location.href = "/";
+            }           
         }
         function about(){
             document.getElementById("navframe").src = "/pages/about.html";
@@ -71,9 +74,6 @@
         }
 
         function onLoad(){
-            /*if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-                alert("You are using mobile device. Web page may not work properly.");
-            }*/
             if(location.href == "http://www.sarpe.tk/#/home"){
                 home();
             }
