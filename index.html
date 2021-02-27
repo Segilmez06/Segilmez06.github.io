@@ -71,8 +71,10 @@
         }
 
         function onLoad(){
-            //alert(location.href);
-            //location.reload();
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                alert("You are using mobile device. Web page may not work properly.");
+            }
+            else{
             if(location.href == "http://www.sarpe.tk/#/home"){
                 home();
             }
