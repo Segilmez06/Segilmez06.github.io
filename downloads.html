@@ -10,12 +10,12 @@
             background-color: gray;
             width: 100%;
             height: 300px;
+            text-align: left;
         }
         .cImgDiv{
             width: 300px;
             height: 300px;
-            text-align: center;
-            vertical-align:middle;
+            float: left;
         }
         .cImg{
             width: 300px;
@@ -23,9 +23,33 @@
         }
         .headTitle{
             font-family: Calibri;
+            font-size: 60px;
         }
         body{
             text-align: center;
+            background-color: lightgray;
+        }
+        .Title{
+            font-family: Calibri;
+            font-size: 40px;
+        }
+        .cTextDiv{
+            /*float: right;*/
+            position: absolute;
+            left: 400px;
+        }
+        .parag{
+            font-size: 20px;
+        }
+        .navButton{
+            background-color: rgb(255, 117, 117);
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border: transparent;
+            border-radius: 5px;
         }
     </style>
     <script>
@@ -36,10 +60,26 @@
     </script>
 </head>
 <body onload="loadScr()">
+    <br>
+    <br>
     <h1 class="headTitle">Downloads</h1>
-    <div class="contentMain">
+    <br>
+    <br>
+    <div class="contentMain" id="MultiKey">
         <div class="cImgDiv">
-            <img class="cImg" src="img/Logo.png" alt="">
+            <img class="cImg" src="dls/MultiKey/logo.png" alt="">
+        </div>
+        <div class="cTextDiv">
+            <div class="cTitle">
+                <br>
+                <h3 class="Title">MultiKey</h3>
+            </div>
+            <div class="cText">
+                <p class="parag">You can easily send mouse clicks with this app. Just you need to bind the key, set CPS (clicks per second) and click START!</p>
+            </div>
+            <div class="downBtnDiv">
+                <button class="navButton" onclick="">Download for Windows (32bit - 64bit)</button>
+            </div>
         </div>
     </div>
 </body>
