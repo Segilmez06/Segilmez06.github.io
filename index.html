@@ -59,8 +59,9 @@
             document.getElementById("navframe").src = "downloads.html";
         }
         function yt(){
-            alert("Sayfadan ayrılıyorsunuz. Yönlendirileceğiniz sayfa: Youtube");
-            location.href = "https://www.youtube.com/erentronik";
+            if(confirm("Sayfadan ayrılıyorsunuz. Yönlendirileceğiniz sayfa: Youtube")){
+                location.href = "https://www.youtube.com/erentronik";
+            }            
         }
         function about(){
             document.getElementById("navframe").src = "about.html";
