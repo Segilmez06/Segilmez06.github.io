@@ -53,10 +53,10 @@
     
     <script>
         function home(){
-            document.getElementById("navframe").src = "main.html";
+            document.getElementById("navframe").src = "pages/main.html";
         }
         function dls(){
-            document.getElementById("navframe").src = "downloads.html";
+            document.getElementById("navframe").src = "pages/downloads.html";
         }
         function yt(){
             if(confirm("You are leaving from this page. Are you sure? Redirecting to: Youtube")){
@@ -64,26 +64,26 @@
             }            
         }
         function about(){
-            document.getElementById("navframe").src = "about.html";
+            document.getElementById("navframe").src = "pages/about.html";
         }
         function esWeb(){
             location.href = "search.html";
         }
         function onLoad(){
             if(location.href == "http://www.sarpe.tk/main"){
-                home();
+                alert("home");
             }
             else if(location.href == "http://www.sarpe.tk/downloads"){
-                dls();
+                alert("dls");
             }
             else if(location.href == "http://www.sarpe.tk/youtube"){
-                yt();
+                alert("yt");
             }
             else if(location.href == "http://www.sarpe.tk/about"){
-                about();
+                alert("about");
             }
             else if(location.href == "http://www.sarpe.tk/esweb"){
-                esWeb();
+                alert("esWeb");
             }
         }
     </script>
@@ -97,7 +97,7 @@
         <a onclick="esWeb()">(BETA) esWeb Search</a>
     </div>
     <div class="framediv">
-        <iframe frameborder="0" class="webframe" id="navframe" src="main.html"></iframe>
+        <iframe frameborder="0" class="webframe" id="navframe" src="pages/main.html"></iframe>
     </div>
 </body>
 </html>
