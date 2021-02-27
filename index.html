@@ -69,8 +69,24 @@
         function esWeb(){
             location.href = "search";
         }
+
         function onLoad(){
-            alert(location.href);
+            //alert(location.href);
+            if(location.href == "http://www.sarpe.tk/#/home"){
+                home();
+            }
+            else if(location.href == "http://www.sarpe.tk/#/downloads"){
+                downloads();
+            }
+            else if(location.href == "http://www.sarpe.tk/#/youtube"){
+                yt();
+            }
+            else if(location.href == "http://www.sarpe.tk/#/about"){
+                about();
+            }
+            else if(location.href == "http://www.sarpe.tk/#/esWeb"){
+                esWeb();
+            }
         }
     </script>
 </head>
