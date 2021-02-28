@@ -7,7 +7,7 @@
     <title>Downloads</title>
     <style>
         .contentMain{
-            background-color: gray;
+            background-color: rgb(182, 181, 255);
             width: 100%;
             height: 300px;
             text-align: left;
@@ -57,6 +57,9 @@
         {
             //location.reload();
         }
+        function virusTotalLink{
+            window.open('https://www.virustotal.com/gui/file/a668ffe98fd0101eb50cd6ec6ac824676d543fc32359ec11762bf60f26228ab9/detection', '_blank');
+        }
     </script>
 </head>
 <body onload="loadScr()">
@@ -71,16 +74,31 @@
         </div>
         <div class="cTextDiv">
             <div class="cTitle">
-                <br>
                 <h3 class="Title">MultiKey</h3>
             </div>
             <div class="cText">
                 <p class="parag">You can easily send mouse clicks with this app. Just you need to bind the key, set CPS (clicks per second) and click START!</p>
+                <p>Note: PC may think this app is virus because app sends mouse clicks quickly. Check VirusTotal link.</p>
             </div>
+            <br>
             <div class="downBtnDiv">
                 <button class="navButton" onclick="location.href='/dls/MultiKey/MultiKey.exe'">Download for Windows (32bit - 64bit)</button>
+                <button class="navButton" onclick="virusTotalLink()">VirusTotal Link</button>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    New downloads soon...
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 </body>
 </html>
