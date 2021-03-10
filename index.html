@@ -17,6 +17,7 @@
 .topnav {
     background-color: #333;
     overflow: hidden;
+    width: 100%;
 }
 
 .mobileTopnav {
@@ -59,7 +60,7 @@
     height: 100%;
 }
     </style>
-    
+    <script src="https://apis.google.com/js/platform.js"></script> 
     <script>
         function home(){
             document.getElementById("navframe").src = "/pages/main.html";
@@ -83,7 +84,6 @@
         }
 
         function onLoad(){
-            //document.getElementById("navframe").style.height = window.innerHeight - 40;
             /*if(window.innerWidth < 560){
                 if(confirm("Do you want to use mobile site?")){
                 document.getElementById("topnav").style.height = 0;
@@ -117,11 +117,18 @@
         <a onclick="esWeb()">(BETA) esWeb Search</a>-->
     </div>
     <div class="topnav" id="topnav">
-        <a onclick="home()" style="background-color: rgb(1, 105, 105);">Home</a>
-        <a onclick="dls()">Downloads</a>
-        <a onclick="yt()">Youtube</a>
-        <a onclick="about()">About</a>
-        <a onclick="esWeb()">(BETA) esWeb Search</a>
+        <div style="float: left;"> 
+            <a onclick="home()" style="background-color: rgb(1, 105, 105);">Home</a>
+            <a onclick="dls()">Downloads</a>
+            <a onclick="yt()">Youtube</a>
+            <a onclick="about()">About</a>
+            <a onclick="esWeb()">(BETA) esWeb Search</a>
+        </div>
+        <div style="float: right;">
+            <div class="g-ytsubscribe" data-channelid="UCnl93Fv9NwufJhTPPe82lig" data-layout="full" data-theme="dark" data-count="default"></div>
+            &nbsp;
+            &nbsp;
+        </div>
     </div>
     <div class="framediv">
         <iframe frameborder="0" class="webframe" id="navframe" src="/pages/main.html"></iframe>
