@@ -51,14 +51,28 @@
             border: transparent;
             border-radius: 5px;
         }
+        .dnavButton{
+            background-color: rgb(182, 106, 106);
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border: transparent;
+            border-radius: 5px;
+            cursor: not-allowed;
+        }
     </style>
     <script>
         function loadScr()
         {
             //location.reload();
         }
-        function virusTotalLink(){
+        function VTMultiKey(){
             window.open('https://www.virustotal.com/gui/file/a668ffe98fd0101eb50cd6ec6ac824676d543fc32359ec11762bf60f26228ab9/detection', '_blank');
+        }
+        function VTtp117(){
+            window.open('', '_blank');
         }
     </script>
 </head>
@@ -77,13 +91,35 @@
                 <h3 class="Title">MultiKey</h3>
             </div>
             <div class="cText">
-                <p class="parag">You can easily send mouse clicks with this app. Just you need to bind the key, set CPS (clicks per second) and click START!</p>
+                <strong class="parag">You can easily send mouse clicks with this app. Just you need to bind the key, set CPS (clicks per second) and click START!</strong>
                 <p>Note: PC may think this app is virus because app sends mouse clicks quickly. Check VirusTotal link.</p>
             </div>
             <br>
             <div class="downBtnDiv">
                 <button class="navButton" onclick="location.href='/dls/MultiKey/MultiKey.exe'">Download for Windows (32bit - 64bit)</button>
-                <button class="navButton" onclick="virusTotalLink()">VirusTotal Link</button>
+                <button class="navButton" onclick="VTMultiKey()">VirusTotal Link</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="contentMain" id="OldTexturesPack">
+        <div class="cImgDiv">
+            <img class="cImg" src="" alt="Coming soon...">
+        </div>
+        <div class="cTextDiv">
+            <div class="cTitle">
+                <h3 class="Title">Old Ore Textures for Minecraft 1.17</h3>
+            </div>
+            <div class="cText">
+                <p class="parag">Don't you like new ore textures of 1.17? No problem! Just download and install this resource pack to Minecraft</p>
+                <p>Note: You can check VirusTotal link.</p>
+            </div>
+            <br>
+            <div class="downBtnDiv">
+                <button class="dnavButton" disabled title="Coming soon..." onclick="location.href=''">Download for Minecraft Java Edition 1.17</button>
+                <button class="dnavButton" disabled title="Coming soon..." onclick="VTtp117()">VirusTotal Link</button>
             </div>
         </div>
     </div>
@@ -91,14 +127,8 @@
     <br>
     <br>
     <br>
-    New downloads soon...
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
 </body>
 </html>
