@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html style="height: 100%;" lang="en">
+<!--
+                                 _   _    
+ ___  __ _ _ __ _ __   ___      | |_| | __
+/ __|/ _` | '__| '_ \ / _ \     | __| |/ /
+\__ \ (_| | |  | |_) |  __/  _  | |_|   < 
+|___/\__,_|_|  | .__/ \___| (_)  \__|_|\_\
+               |_|                      
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,7 +90,7 @@
             document.getElementById("navframe").src = "/pages/about.html";
         }
         function esWeb(){
-            location.href = "search";
+            location.href = "/search.html";
         }
 
         function onLoad(){
@@ -102,6 +110,11 @@
                 document.getElementById("topnav").style.height = "50px";
                 document.getElementById("mobileTopnav").style.height = "0px";
             }
+
+            Notification.requestPermission().then(function(result) {
+                console.log(result);
+            });
+
             if(location.href == "http://www.sarpe.tk/#/home"){
                 home();
             }
