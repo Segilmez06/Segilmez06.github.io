@@ -22,8 +22,6 @@
     <meta name="keywords" content="free website">
     <meta name="keywords" content="makro">
     <meta name="keywords" content="macro">
-    <meta name="keywords" content="sonoyuncu">
-    <meta name="keywords" content="son oyuncu">
     <meta name="keywords" content="cps">
     <meta name="keywords" content="MultiKey">
     <meta name="keywords" content="multikey">
@@ -133,18 +131,26 @@
         function home(){
             document.getElementById("cm").style.display = "block";
             document.getElementById("cd").style.display = "none";
+
+            document.getElementById("nbd").style.display = "none"
         }
         function dls(){
             document.getElementById("cm").style.display = "none";
             document.getElementById("cd").style.display = "block";
+
+            document.getElementById("nbd").style.display = "none"
         }
         function yt(){
             if(confirm("You are leaving from this page. Are you sure? Redirecting to: Youtube")){
                 location.href = "https://www.youtube.com/erentronik";
-            }           
+            }
+            
+            document.getElementById("nbd").style.display = "none"
         }
         function esWeb(){
             location.href = "/search.html";
+
+            document.getElementById("nbd").style.display = "none"
         }
     </script>
     <script>//onload
@@ -163,9 +169,9 @@
             }
 
             if(window.innerWidth < 1160){
-                if(confirm("Do you want to use mobile site?")){
+                //if(confirm("Do you want to use mobile site?")){
                     getMobilePage();
-                }
+                //}
             }
         }
     </script>
