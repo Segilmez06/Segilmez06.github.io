@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 100%;" lang="en-TR">
+<html lang="en">
 <!--
                                  _   _    
  ___  __ _ _ __ _ __   ___      | |_| | __
@@ -9,160 +9,415 @@
                |_|                      
 -->
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="keywords" content="erentronik">
     <meta name="keywords" content="sarp eren eğilmez">
     <meta name="keywords" content="sarp eren">
     <meta name="keywords" content="sarp">
     <meta name="keywords" content="zoom web">
     <meta name="keywords" content="free website">
+    <meta name="keywords" content="makro">
+    <meta name="keywords" content="macro">
+    <meta name="keywords" content="sonoyuncu">
+    <meta name="keywords" content="son oyuncu">
+    <meta name="keywords" content="cps">
+    <meta name="keywords" content="MultiKey">
+    <meta name="keywords" content="multikey">
+
     <title>Sarp Eren EGILMEZ - sarpe.tk</title>
     <link rel="icon" type="image/png" href="/img/Logo.png"/>
+    <script src="https://apis.google.com/js/platform.js"></script>
+
     <style>
-
-        .body{
-            background-color: #333;
-            overflow: hidden;
+        body{
+            width: 100%;
             height: 100%;
-            /*width: 100%;*/
+            left: 0;
+            top: 0;
+            background-color: rgb(197, 197, 197);
+            margin: 0;
+            padding: 0;
         }
-
-        .topnav {
-            background-color: #333;
-            overflow: hidden;
+        .navDiv{
+            text-align: center;
+            position: sticky;
+            top: 0;            
+            background-color: rgba(82, 82, 82, 0.7);
             width: 100%;
         }
-
-        .mobileTopnav {
-            background-color: #333;
-            overflow: hidden;
-            height: 0;
+        .navBtn{
+            margin: 0;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border: transparent;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: medium;
         }
-
-        .topnav a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-            font-family: Calibri;
+        .navBtn:hover{
+            border: transparent;
+            background-color: rgb(65, 65, 65);
             border-radius: 2px;
         }
-
-        .topnav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        .topnav a.active {
-            background-color: darkblue;
-            color: white;
-        }
-
-        .container{
-            background-color: white;
+        .contentDiv{
             width: 100%;
-            height: max-content;
-            bottom: 700;
+            text-align: center;
         }
-        .webframe{
+        .stableContent{
             width: 100%;
-            height: 100%;
+            text-align: center;
+            background-image: linear-gradient(to right,#00b86b,#007dc5);
+            height: 300px;
         }
-        .framediv{
-            background-color: white;
-            height: 100%;
+        .footDiv{
+            width: 100%;
+            height: 80px;
+            background-color: rgba(82, 82, 82, 0.9);
+            position: fixed;
+            bottom: 0;
+        }
+
+        .cntMain{
+            text-align: center;
+        }
+        .cntDLS{
+            display: none;
         }
     </style>
-    <script src="https://apis.google.com/js/platform.js"></script> 
-    <script>
+    <style>
+        .navButtonsDiv{
+            display: none;
+            background-color: rgba(32, 32, 32, 0.7);
+        }
+        .mobileTopBar{
+            width: 100%;
+            position: sticky;
+            top: 0;
+            height: 50px;
+            background-color: rgba(32, 32, 32, 0.7);
+            display: none;
+        }
+        .mobileNavBtn{
+            border: transparent; 
+            background-color: transparent; 
+            color: white; 
+            float: left;
+            font-size: larger;
+            position: absolute;
+            top: 15px;
+            left: 10px;
+        }
+        .openMenuBtn{
+            float: right;
+            background-color: transparent;
+            color: white;
+            font-weight: bolder;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: large;
+        }
+    </style>
+
+    <script>//navigation
         function home(){
-            document.getElementById("navframe").src = "/pages/main.html";
+            document.getElementById("cm").style.display = "block";
+            document.getElementById("cd").style.display = "none";
         }
         function dls(){
-            document.getElementById("navframe").src = "/pages/downloads.html";
+            document.getElementById("cm").style.display = "none";
+            document.getElementById("cd").style.display = "block";
         }
         function yt(){
             if(confirm("You are leaving from this page. Are you sure? Redirecting to: Youtube")){
                 location.href = "https://www.youtube.com/erentronik";
-            } 
-            else{
-                location.href = "/";
             }           
-        }
-        function about(){
-            document.getElementById("navframe").src = "/pages/about.html";
         }
         function esWeb(){
             location.href = "/search.html";
         }
-
+    </script>
+    <script>//onload
         function onLoad(){
-            if(window.innerWidth < 730){
-                if(confirm("Do you want to use mobile site? (Mobile site is still in development.)")){
-                    document.getElementById("topnav").style.height = "0px";
-                    document.getElementById("mobileTopnav").style.height = "50px";
-                }
-                else
-                {
-                    document.getElementById("topnav").style.height = "50px";
-                    document.getElementById("mobileTopnav").style.height = "0px";
-                }
-            }
-            else
-            {
-                document.getElementById("topnav").style.height = "50px";
-                document.getElementById("mobileTopnav").style.height = "0px";
-            }
-
-            Notification.requestPermission().then(function(result) {
-                console.log(result);
-            });
-
-            if(location.href == "http://www.sarpe.tk/#/home"){
+            if(location.href == "http://www.sarpe.tk/home"){
                 home();
             }
-            else if(location.href == "http://www.sarpe.tk/#/downloads"){
+            else if(location.href == "http://www.sarpe.tk/downloads"){
                 dls();
             }
-            else if(location.href == "http://www.sarpe.tk/#/youtube"){
+            else if(location.href == "http://www.sarpe.tk/youtube"){
                 yt();
             }
-            else if(location.href == "http://www.sarpe.tk/#/about"){
-                about();
-            }
-            else if(location.href == "http://www.sarpe.tk/#/esWeb"){
+            else if(location.href == "http://www.sarpe.tk/esWeb"){
                 esWeb();
+            }
+
+            if(window.innerWidth < 1160){
+                if(confirm("Do you want to use mobile site?")){
+                    getMobilePage();
+                }
             }
         }
     </script>
+    <script>//mobile panel
+        function getMobilePage(){
+            document.getElementById("nd").style.display = "none";
+            document.getElementById("mtp").style.display = "block";
+        }
+        var state = false
+        function toggleDiv(){
+            if (state == true){
+                state = false;
+                document.getElementById("nbd").style.display = "none"
+            }
+            else if (state == false){
+                state = true;
+                document.getElementById("nbd").style.display = "block"
+            }
+        }
+    </script>
+
 </head>
-<body class="body" onload="onLoad()">
-    <div class="mobileTopnav" id="mobileTopnav">
-        <!--<a onclick="home()" style="background-color: rgb(1, 105, 105);">Home</a>
-        <a onclick="dls()">Downloads</a>
-        <a onclick="yt()">Youtube</a>
-        <a onclick="about()">About</a>
-        <a onclick="esWeb()">(BETA) esWeb Search</a>-->
-    </div>
-    <div class="topnav" id="topnav">
-        <div style="float: left;"> 
-            <a onclick="home()" style="background-color: rgb(1, 105, 105);">Home</a>
-            <a onclick="dls()">Downloads</a>
-            <a onclick="yt()">Youtube</a>
-            <a onclick="about()">About</a>
-            <a onclick="esWeb()">(BETA) esWeb Search</a>
+
+<body onload="onLoad()">
+    <!--Main Navigation-->
+    <div class="navDiv" id="nd">
+        <br>
+        <div style="position: absolute; right: 10px;">
+            <div class="g-ytsubscribe" data-channelid="UCnl93Fv9NwufJhTPPe82lig" data-layout="full" data-theme="dark" data-count="default"></div> &nbsp; &nbsp;
         </div>
-        <div style="float: right;">
-            <div class="g-ytsubscribe" data-channelid="UCnl93Fv9NwufJhTPPe82lig" data-layout="full" data-theme="dark" data-count="default"></div>
-            &nbsp;
-            &nbsp;
+        <button class="navBtn" onclick="home()">Home</button>
+        |
+        <button class="navBtn" onclick="dls()">Downloads</button>
+        |
+        <button class="navBtn" onclick="yt()">Youtube</button>
+        |
+        <button class="navBtn" onclick="esWeb()">esWeb</button>    
+        <br>
+        <hr style="width: 750px; color: black;">    
+        <br>
+        
+    </div>
+    <!--Mobile Navigation-->
+    <div class="mnavDiv" id="mnd">
+        <div class="mobileTopBar" id="mtp">
+            <button class="mobileNavBtn" onclick="location.href = '/';">SARPE.TK</button>
+            <button class="openMenuBtn" onclick="toggleDiv()">+</button>
+        </div>
+        <div class="navButtonsDiv" id="nbd">
+            <button class="navBtn" onclick="home()">Home</button>
+            <br>
+            <button class="navBtn" onclick="dls()">Downloads</button>
+            <br>
+            <button class="navBtn" onclick="yt()">Youtube</button>
+            <br>
+            <button class="navBtn" onclick="esWeb()">esWeb</button>
         </div>
     </div>
-    <div class="framediv">
-        <iframe title=" " frameborder="0" class="webframe" id="navframe" src="/pages/main.html"></iframe>
+
+    <div class="contentDiv">
+        <div class="stableContent">
+            <br>
+            <br>
+            <br>
+            <strong style="font-family: Calibri; font-size: 60px;">Sarp Eren EGILMEZ</strong>
+            <br>
+            <br>
+            <strong style="font-size: 25px;">@Segilmez06</strong>
+        </div>
+        <div class="contentFrame">
+            <!--Main Page-->
+            <div class="cntMain" id="cm">
+                <style>
+                    .wsDiv{
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .wsH{
+                        font-family: Calibri;
+                    }
+                    .wsBtn{
+                        border: transparent;
+                        width: 190px;
+                        height: 40px;
+                        background-color: #008bfd;
+                    }
+                </style>
+                <script></script>
+                <div class="zoomwebDiv">
+                    <h4 class="wsH">Click to enter Zoom Meeting with your web browser.</h4>
+                    <button class="wsBtn" onclick="location.href='/zoom.html'"><strong>Zoom Web &gt;&gt;</strong></button>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <!--Downloads-->
+            <div class="cntDLS" id="cd">
+                <style>
+                    .contentMain{
+                    background-color: rgb(182, 181, 255);
+                    width: 100%;
+                    height: 300px;
+                    text-align: left;
+                    }
+                    .cImgDiv{
+                        width: 300px;
+                        height: 300px;
+                        float: right;
+                    }
+                    .cImg{
+                        width: 300px;
+                        height: 300px;
+                    }
+                    .headTitle{
+                        font-family: Calibri;
+                        font-size: 60px;
+                    }
+                    body{
+                        text-align: center;
+                        background-color: lightgray;
+                    }
+                    .Title{
+                        font-family: Calibri;
+                        font-size: 40px;
+                    }
+                    .cTextDiv{
+                        /*position: absolute;*/
+                        float: left;
+                    }
+                    .parag{
+                        font-size: 15px;
+                    }
+                    .navButton{
+                        background-color: rgb(255, 117, 117);
+                        color: white;
+                        padding: 15px 25px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        border: transparent;
+                        border-radius: 5px;
+                    }
+                    .dnavButton{
+                        background-color: rgb(182, 106, 106);
+                        color: white;
+                        padding: 15px 25px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        border: transparent;
+                        border-radius: 5px;
+                        cursor: not-allowed;
+                    }
+                </style>
+                <script></script>
+                <br>
+                <br>
+                <h1 class="headTitle">Downloads</h1>
+                <br>
+                <br>
+                <div class="contentMain" id="MultiKey">
+                    <div style="width: 10px; height: 10px; float: left;"></div>
+                    <div class="cImgDiv">
+                        <img class="cImg" src="/dls/MultiKey/logo.png" alt="Multikey 1.2 Logo">
+                    </div>
+                    <div class="cTextDiv">
+                        <div class="cTitle">
+                            <h3 class="Title">MultiKey</h3>
+                        </div>
+                        <div class="cText">
+                            <strong class="parag">You can easily send mouse clicks with this app. Just you need to bind the key, set CPS (clicks per second) and click START!</strong>
+                            <p>Note: Antivirus will give false positive because app sends clicks quickly.</p>
+                        </div>
+                        <br>
+                        <div class="downBtnDiv">
+                            <button class="navButton" onclick="location.href='/dls/MultiKey/MultiKey.exe'">Download for Windows (32bit - 64bit)</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="contentMain" id="1165GUIUpdate">
+                    <div style="width: 10px; height: 10px; float: left;"></div>
+                    <div class="cImgDiv">
+                        <img class="cImg" src="/dls/1.16.5-GUI-Update/logo.png" alt="1.16.5 GUI Update Logo">
+                    </div>
+                    <div class="cTextDiv">
+                        <div class="cTitle">
+                            <h3 class="Title">GUI Update for 1.16.5</h3>
+                        </div>
+                        <div class="cText">
+                            <strong class="parag">Do you need mini map? Or do you want to see mobs health? No worry! Download and install this modpack. Done!</strong>
+                        </div>
+                        <br>
+                        <div class="downBtnDiv">
+                            <button class="navButton" title="Supporting official Minecraft skin system." onclick="location.href='/dls/1.16.5-GUI-Update/(MC)mp-1.16.5-GUI-Update.zip'">Download for Minecraft</button>
+                            <button class="navButton" title="Supporting TLauncher skin system." onclick="location.href='/dls/1.16.5-GUI-Update/(TL)mp-1.16.5-GUI-Update.zip'">Download for TLauncher</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="contentMain" id="117OldTextures">
+                    <div style="width: 10px; height: 10px; float: left;"></div>
+                    <div class="cImgDiv">
+                        <img class="cImg" src="/dls/1.17-Old-Ores/logo.webp" alt="Old Ore Textures for 1.17 Logo">
+                    </div>
+                    <div class="cTextDiv">
+                        <div class="cTitle">
+                            <h3 class="Title">Old Ore Textures for Minecraft 1.17</h3>
+                        </div>
+                        <div class="cText">
+                            <strong class="parag">Don't you like new ore textures of 1.17? No problem! Just download and install this resource pack to Minecraft</strong>
+                        </div>
+                        <br>
+                        <div class="downBtnDiv">
+                            <button class="navButton" onclick="location.href='/dls/1.17-Old-Ores/old-ore-textures-by-Segilmez06.zip'">Download for Minecraft Java Edition 1.17</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="footDiv" id="fd">
+        <br>
+        <button onclick="document.getElementById('fd').style.display = 'none';" style="position:absolute; right: 2px; bottom: 55px; color: white; font-weight: bolder; background-color: transparent; font-size: 15px;" title="Click to hide the panel.">X</button>
+        <div style="position: absolute; left:10px;">
+            <strong style="font-family: Calibri; color: white; font-weight: normal;">©2021 - sarpe.tk<br>All design and codes created by Sarp Eren EGILMEZ</strong>
+        </div>
+        <div style="position: absolute; right: 30px; bottom: 20px;">
+            <div class="donateDiv" style="background-color: green; width: min-content; border-radius: 7px;;">
+                <strong style="color:white">Donate me with ETHERIUM!</strong>
+                <br>
+                <input type="text" style="background-color: lime; border: transparent; border-radius: 7px; width: 310px;" readonly="true" value="0x759063a910149847a8391a28434e7203e174df1c">
+                <br>
+            </div>
+        </div>
     </div>
 </body>
 </html>
