@@ -115,7 +115,11 @@
         }
         .openMenuBtn{
             float: right;
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.7);
+            background-image: url("img/menu.png");
+            background-size: 40px 40px;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
             font-weight: bolder;
             width: 50px;
@@ -218,7 +222,7 @@
     <div class="mnavDiv" id="mnd">
         <div class="mobileTopBar" id="mtp">
             <button class="mobileNavBtn" onclick="location.href = '/';">SARPE.TK</button>
-            <button class="openMenuBtn" onclick="toggleDiv()">+</button>
+            <button class="openMenuBtn" onclick="toggleDiv()"></button>
         </div>
         <div class="navButtonsDiv" id="nbd">
             <button class="navBtn" onclick="home()">Home</button>
@@ -349,7 +353,7 @@
                         </div>
                         <div class="cText">
                             <strong class="parag">You can easily send mouse clicks with this app. Just you need to bind the key, set CPS (clicks per second) and click START!</strong>
-                            <p>Note: Antivirus will give false positive because app sends clicks quickly.</p>
+                            <p>Note: Antivirus software may give false positive because app sends clicks quickly.</p>
                         </div>
                         <br>
                         <div class="downBtnDiv">
